@@ -1,0 +1,9 @@
+#_*_ coding:utf-8 _*_
+#输入年月日，输出当前日期在本年度的第几天
+import time
+def whichday(tmpday):
+    tmp=time.strptime(tmpday,'%Y-%m-%d')
+    print tmp
+    print 'tmp:'+str(tmp[7])
+
+whichday('2015-6-7')
