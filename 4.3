@@ -1,0 +1,38 @@
+#_*_ coding:utf-8 _*_
+#查询字符串中是否有重复字符
+def ismulply(doc):
+    flag=False
+    for n in range(len(doc)):
+        counttmp=doc.count(doc[n])
+        if counttmp>1:
+            flag=True
+    return flag
+
+
+print ismulply('123123')
+
+
+#测试用例
+#_*_ coding:utf-8 _*_
+#题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
+
+def countnum():
+    tmp=[1,2,3,4]
+    doc=[]
+    ram=[]
+    for index in range(len(tmp)):
+            for s in range(len(tmp)):
+                for t in range(len(tmp)):
+                    doc.append(str(tmp[index])+str(tmp[s])+str(tmp[t]))
+
+    #print doc
+
+    for i in range(len(doc)):
+        item=''
+        item=str(doc[i])
+        if isMulply(item)==False:
+            ram.append(item)
+    print ram
+
+
+
